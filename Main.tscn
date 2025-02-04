@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8yfep4flk2vc"]
+
+[ext_resource type="PackedScene" uid="uid://b2d5tphh75ffe" path="res://Coaster.tscn" id="1_13sko"]
+[ext_resource type="Texture2D" uid="uid://c6f2fjebqdko" path="res://Assets/T_Checker_BW_GridLong.png" id="3_o8kd1"]
+
+[node name="Main" type="Node"]
+
+[node name="Coaster" parent="." instance=ExtResource("1_13sko")]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -1)
+centered = false
+texture = ExtResource("3_o8kd1")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2d5tphh75ffe"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_fhtj0"]
+
+[node name="CSGBox3D" type="CSGBox3D"]
+size = Vector3(3, 1, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, 0)
+mesh = SubResource("CapsuleMesh_fhtj0")
+
+[node name="Camera3D" type="Camera3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+light_color = Color(1, 0, 0, 1)
